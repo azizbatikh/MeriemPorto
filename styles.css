@@ -1,0 +1,474 @@
+@font-face {
+    font-family: Yanone;
+    src: url(Font/YanoneKaffeesatz-VariableFont_wght.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300&display=swap');
+
+*{
+    font-family: Yanone;
+    margin: 0;
+    top : 0;
+    left: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #efefef;
+}
+
+.menu {
+    display: none;
+}
+
+/* NAVBAR */
+
+/* Header & Navigation */
+header {
+    position: fixed; /* Fixe la barre en haut */
+    top: 0; /* Positionne la barre en haut */
+    left: 0;
+    width: 100%; /* Barre pleine largeur */
+    background-color: rgba(13, 148, 136, 0.9); /* Fond semi-transparent */
+    display: flex;
+    justify-content: center; /* Centre les liens horizontalement */
+    z-index: 100; /* Place le header devant les autres éléments */
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navBar {
+    display: flex;
+    gap: 2rem; /* Ajoute un espacement entre les liens */
+}
+
+.navBar a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: #efefef;
+    padding: 5px 10px;
+    transition: 0.2s;
+    position: relative;
+}
+
+.navBar a:hover {
+    color: #fff;
+}
+
+.navBar a span {
+    display: none; /* Retirer les styles d'animation si non nécessaire */
+}
+/* MAIN */
+
+.main {
+    position: fixed;
+    background: yellow;
+    width: 100%;
+    height: 90vh;
+}
+
+.imgBack {
+    width: 100%;
+    height: 100vh;
+}
+
+.imgBack img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.imgBack::before {
+    content: '';
+    position: absolute;
+    background: #152a2f;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: .6;
+}
+
+.content {
+    position:absolute;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    width: 100%;
+    height: 100vh;
+    margin: 0px 20px;
+}
+
+.nomPrenom {
+    margin-left: 20%;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: left;
+    gap: 30px;
+    color: #efefef;
+}
+
+.nomPrenom h1 {
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 15px;
+    font-weight: 200;
+    font-size: 10rem;
+    line-height: 8rem;
+}
+
+.nomPrenom h3 {
+    margin-top: -10px;
+    font-size: 3rem;
+    letter-spacing: 10px;
+    font-weight: 100;
+}
+
+.nomPrenom button {
+    border: none;
+    padding: 15px 0%;
+    border-radius: 15px;
+    box-shadow: -4px 3px 0px #efefef;
+    background:#00967d;
+    width: auto;
+    align-items: center;
+    transition: .3s;
+    height: auto;
+}
+
+.nomPrenom button a {
+    padding: 40px;  
+    font-size: 3rem;
+    font-weight: 300;
+    color: #efefef;
+}
+
+.nomPrenom button:hover {
+    transform: scale(120%);
+    box-shadow: 0px 0px 0px #efefef;
+    border-radius: 28px;
+}
+
+/* information */
+
+.information {
+    border-radius: 50px 50px 0 0; 
+    margin-top: 100vh;
+    position: relative;
+    width: 100%;
+    background: radial-gradient(circle, rgba(0,150,125,1) 10%, rgba(24,124,147,1) 100%);
+
+}
+
+
+.container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+    margin-top: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+
+.contact-box{
+	max-width: 75%;
+    margin: 176px 0px;
+    border-radius: 20px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 90px 10px rgba(253, 253, 253, 0.3);
+}
+
+.left{
+	background: url("Images/backgroun.jpg") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #2ecc71;
+}
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #2ecc71;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+    border-radius: 10px;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn:hover{
+    background-color: #27ae60;
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1544px ) {
+    
+    .nomPrenom h1 {
+        font-size: 7rem;
+    }
+
+    .contact-box {
+        margin: 90px 0px;
+    }
+}
+
+@media screen and (max-width: 1148px ) {
+    
+    .nomPrenom {
+        gap: 40px
+    }
+
+    .nomPrenom h1 {
+        line-height: 4rem;
+        font-size: 6rem;
+    }
+
+    .contact-box {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 1016px ) {
+    
+    .nomPrenom {
+        gap: 40px
+    }
+
+    .nomPrenom h1 {
+        line-height: 4rem;
+        font-size: 4rem;
+    }
+}
+
+
+
+
+@media screen and (max-width: 840px) {
+    
+    header {
+        display: none;
+    }
+
+    .contact-box{
+        max-width: 90%;
+        border-radius: 2rem;
+        margin: 96px 0px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .menu {
+        display:block;
+        top: 10px;
+        position: fixed;
+        max-width: 300px;
+        border-radius: 20px;
+        margin: 1rem;
+        overflow: hidden;
+        background: #00967d;
+        z-index: 100;
+    }
+    
+    .btn-top {
+        padding: 10px;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        display: flex;
+        align-items: center; 
+        cursor: pointer;
+        border-radius: 5px;
+        background: #00967d;
+    }
+    
+    .btn-top img {
+        width: 45px;
+    }
+    
+    .links ul  {
+        padding-left: 10px;
+    }
+
+    .links {
+        padding: 0 20px;
+        transition: height 0.4s ease-in-out;
+        transition: .5s;
+        margin-left: -150px;
+        height: 0;
+    }
+    
+    .links li {
+        list-style-type: none;
+        padding: 15px 0;
+    }
+    
+    .links li:last-child {
+        padding-bottom: 30px;
+    }
+    
+    .links li a {
+        color: #efefef;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+
+    .content {
+        display: flex;
+        grid-template-columns: 100% 0%;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-around;
+    }
+
+    .nomPrenom {
+        margin: 0px;
+    }
+
+    .nomPrenom h1 {
+        display: flex;
+        font-size: 11rem;
+        line-height: 12rem;
+    }
+
+    .imgAziz {
+        display: none;
+        position: absolute;
+    }
+
+}
+
+@media screen and (max-width: 670px) {
+
+    .nomPrenom h1 {
+        font-size: 7rem;
+        line-height: 8rem;
+    }
+}
+
+@media screen and (max-width: 458px) {
+
+    .nomPrenom h1 {
+        font-size: 5rem;
+        line-height: 8rem;
+    }
+
+    .contact-box {
+        background: transparent;
+        max-width: 100%;
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    .contact-box h2 {
+        font-size: 50px;
+        color: #efefef;
+    }
+
+    .container {
+        padding: 0px 0px;
+    }
+
+}
+
+@media screen and (max-width: 352px) {
+
+    .content {
+        margin: 0px 20px;
+    }
+
+    .nomPrenom h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+        font-weight: 800;
+    }
+
+    .nomPrenom h3 {
+        font-size:  2rem;
+    }
+
+    .content button {
+        padding: 10px 5px;
+    }
+
+    .content button a {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+
+    .nomPrenom h1 {
+        font-size: 3rem;
+        line-height: 2rem;
+        font-weight: 800;
+    }
+
+    .nomPrenom {
+        gap : 70px;
+    }
+
+}

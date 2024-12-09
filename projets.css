@@ -1,0 +1,320 @@
+@font-face {
+    font-family: Yanone;
+    src: url(Font/YanoneKaffeesatz-VariableFont_wght.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300&display=swap');
+
+*{
+    font-family: Yanone;
+    margin: 0;
+    top : 0;
+    left: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #187c93c4;
+}
+
+.menu {
+    display: none;
+}
+
+/* Header & Navigation */
+header {
+    position: fixed; /* Fixe la barre en haut */
+    top: 0; /* Positionne la barre en haut */
+    left: 0;
+    width: 100%; /* Barre pleine largeur */
+    background-color: rgba(13, 148, 136, 0.9); /* Fond semi-transparent */
+    display: flex;
+    justify-content: center; /* Centre les liens horizontalement */
+    z-index: 100; /* Place le header devant les autres éléments */
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navBar {
+    display: flex;
+    gap: 2rem; /* Ajoute un espacement entre les liens */
+}
+
+.navBar a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: #efefef;
+    padding: 5px 10px;
+    transition: 0.2s;
+    position: relative;
+}
+
+.navBar a:hover {
+    color: #fff;
+}
+
+.navBar a span {
+    display: none; /* Retirer les styles d'animation si non nécessaire */
+}
+
+/* MAIN */
+
+
+.main {
+    width: auto;
+    gap: 10px;
+    padding: 5rem;
+    height: auto;
+    margin: 8vh 0% 0vh 0%;
+}
+.premier {
+    display: flex ; !important;
+   margin-bottom:-180px ;
+}
+.txtContent{
+    width: 100%;
+    height: auto;
+}
+.txtContent p.left {
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 4.5rem;
+    color: #efefef;
+}
+.second {
+    display: flex;
+}
+.txtContent p.right {
+    text-align: right;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 4.5rem;
+    color: #efefef;
+}
+
+.imgContent {
+    width: 100%;
+    height: auto;
+}
+
+.explainImg.right {
+    width: 100%;
+    height: 68%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+.explainImg.left {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.valeur {
+    color: #c9a000;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+/* RESPONSIVE */
+
+
+@media screen and (max-width: 1200px){
+
+
+
+    #element1 {
+        order: 1;
+    }
+
+    #element2 {
+        order: 2;
+    }
+
+    #element3 {
+        order: 3;
+    }
+
+    #element4{
+        order: 4;
+    }
+
+    #element5 {
+        order: 5;
+    }
+
+    #element6 {
+        order: 6;
+    }
+
+    #element7 {
+        order: 7;
+    }
+
+    #element8 {
+        order: 8;
+    }
+
+    .main {
+        width: auto;
+        gap: 30px;
+        padding: 2rem 5rem 5rem 5rem;
+        height: auto;
+        margin: 0vh 0% 0vh 0%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .explainImg.right {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: -4px -5px 1px #00967d, -10px -10px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .txtContent p.right {
+        text-align: justify;
+        font-size: 3rem;
+        font-weight: 300;
+        line-height: 4.5rem;
+        color: #efefef;
+    }
+
+}
+
+@media screen and (max-width: 840px) {
+
+
+    .container {
+        border-radius: 0px;
+    }
+
+    header {
+        display: none;
+    }
+
+    .menu {
+        display:block;
+        top: 10px;
+        position: fixed;
+        max-width: 300px;
+        border-radius: 20px;
+        margin: 1rem;
+        overflow: hidden;
+        background: #00967d;
+        z-index: 100;
+    }
+
+    .btn-top {
+        padding: 5px;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 5px;
+        background: #00967d;
+    }
+
+    .btn-top img {
+        width: 40px;
+    }
+
+    .links ul  {
+        padding-left: 10px;
+    }
+
+    .links {
+        padding: 0 20px;
+        transition: height 0.4s ease-in-out;
+        transition: .5s;
+        margin-left: -150px;
+        height: 0;
+    }
+
+    .links li {
+        list-style-type: none;
+        padding: 15px 0;
+    }
+
+    .links li:last-child {
+        padding-bottom: 30px;
+    }
+
+    .links li a {
+        color: #efefef;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+}
+
+
+@media screen and (max-width: 570px) {
+
+    .menu {
+        display:block;
+        top: 10px;
+        position: absolute;
+        max-width: 300px;
+        border-radius: 20px;
+        margin: 1rem;
+        overflow: hidden;
+        background: #00967d;
+        z-index: 100;
+    }
+
+    .txtContent p.right{
+        text-align: justify;
+        font-size: 2.5rem;
+        font-weight: 300;
+        line-height: 4rem;
+        color: #efefef;
+    }
+
+    .txtContent p.left {
+        text-align: justify;
+        font-size: 2.5rem;
+        font-weight: 300;
+        line-height: 4rem;
+        color: #efefef;
+    }
+}
+
+@media  screen and (max-width: 430px) {
+
+    .main {
+        width: auto;
+        gap: 30px;
+        padding: 2rem 0.5rem 5rem 1rem;
+        height: auto;
+        margin: 8vh 0% 0vh 0%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .txtContent p.right{
+        text-align: justify;
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 3rem;
+        color: #efefef;
+    }
+
+    .txtContent p.left {
+        text-align: justify;
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 3rem;
+        color: #efefef;
+    }
+
+}

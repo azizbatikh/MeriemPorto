@@ -1,0 +1,375 @@
+@font-face {
+    font-family: Yanone;
+    src: url(Font/YanoneKaffeesatz-VariableFont_wght.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300&display=swap');
+
+*{
+    font-family: Yanone;
+    margin: 0;
+    top : 0;
+    left: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #187c93c4;
+}
+
+.menu {
+    display: none;
+}
+/* Header & Navigation */
+header {
+    position: fixed; /* Fixe la barre en haut */
+    top: 0; /* Positionne la barre en haut */
+    left: 0;
+    width: 100%; /* Barre pleine largeur */
+    background-color: rgba(13, 148, 136, 0.9); /* Fond semi-transparent */
+    display: flex;
+    justify-content: center; /* Centre les liens horizontalement */
+    z-index: 100; /* Place le header devant les autres éléments */
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navBar {
+    display: flex;
+    gap: 2rem; /* Ajoute un espacement entre les liens */
+}
+
+.navBar a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: #efefef;
+    padding: 5px 10px;
+    transition: 0.2s;
+    position: relative;
+}
+
+.navBar a:hover {
+    color: #fff;
+}
+
+.navBar a span {
+    display: none; /* Retirer les styles d'animation si non nécessaire */
+}
+/* MAIN */
+
+
+.main {
+    width: auto;
+    height: auto;
+    margin: 6vh 10% 10vh 10%;
+    min-width: 360px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    height: auto;
+    align-items: center;
+    justify-items: center;
+    border-radius: 2rem;
+    box-shadow: -6px 6px 20px rgba(0, 0, 0, 0.2);
+    width: auto;
+    background: #cfcfcf;
+    padding-bottom: 5rem;
+    padding-top: 3.5rem;
+    gap: 5rem;
+}
+
+.origin {
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-items: center;
+    height: auto;
+    width: 100%;
+}
+
+.contentBar {
+    display: flex;
+    width: 80%;
+    height: 26px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    box-shadow: 0px 3px 0px #00967d75, 0px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.progressBar{
+    background: #00967d;
+    width: 0%;
+    height: 100%;
+    border-radius: 1rem;
+    box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.3);
+    transition: .5s;
+}
+
+.contentBar::after {
+    content: '0%';
+    margin-top: 1px;
+    font-size: 1.5rem;
+    color: #131313;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+    letter-spacing: .5rem;
+    position: absolute;
+    left: 48%;
+
+}
+
+
+.contentBar.C::after {
+    content: '75%';}
+.progressBar.C {
+    animation: progressC 2s ease forwards;
+    transition: .2s;
+}
+
+.contentBar.HTML::after {
+    content: '75%';}
+.progressBar.HTML {
+    animation: progressHTML 2s ease forwards;
+    transition: .2s;
+    animation-delay: .2s;
+}
+
+.contentBar.CSS::after {
+    content: '60%';}
+.progressBar.CSS {
+    animation: progressCSS 2s ease forwards;
+    transition: .2s;
+    animation-delay: .4s;
+}
+
+.contentBar.JS::after {
+    content: '40%';}
+.progressBar.JS {
+    animation: progressJS 2s ease forwards;
+    transition: .2s;
+    animation-delay: .6s;
+}
+
+.contentBar.SQL::after {
+    content: '80%';}
+.progressBar.SQL {
+    animation: progressSQL 2s ease forwards;
+    transition: .2s;
+    animation-delay: .5s;
+}
+
+.contentBar.IT::after {
+    content: '100%';}
+.progressBar.IT {
+    animation: progressIT 2s ease forwards;
+    transition: .2s;
+    animation-delay: .8s;
+}
+
+.contentBar.FR::after {
+    content: '100%';}
+.progressBar.FR {
+    animation: progressFR 2s ease forwards;
+    transition: .2s;
+    animation-delay: .5s;
+}
+
+.contentBar.ESP::after {
+    content: '60%';}
+.progressBar.ESP {
+    animation: progressESP 2s ease forwards;
+    transition: .2s;
+    animation-delay: .4s;
+}
+
+.contentBar.EN::after {
+    content: '100%';}
+.progressBar.EN {
+    animation: progressEN 2s ease forwards;
+    transition: .2s;
+    animation-delay: .3s;
+}
+
+.contentBar.AR::after {
+    content: '100%';}
+.progressBar.AR {
+    animation: progressAR 2s ease forwards;
+    transition: .2s;
+    animation-delay: .5s;
+}
+
+
+@keyframes progressC {
+    0% { width: 0%; }
+    100% { width: 75%; }
+}
+@keyframes progressHTML {
+    0% { width: 0%; }
+    100% { width: 75%; }
+}
+@keyframes progressCSS {
+    0% { width: 0%; }
+    100% { width: 60%; }
+}
+@keyframes progressJS {
+    0% { width: 0%; }
+    100% { width: 40%; }
+}
+@keyframes progressSQL {
+    0% { width: 0%; }
+    100% { width: 80%; }
+}
+@keyframes progressIT {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+@keyframes progressFR {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+@keyframes progressESP {
+    0% { width: 0%; }
+    100% { width: 60%; }
+}
+@keyframes progressEN {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+@keyframes progressAR {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+
+
+
+
+.origin h2 {
+    color: #00967d;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    text-shadow: 1px 1px 3px rgba(98, 235, 44, 0.568);
+}
+
+
+
+@media screen and (max-width: 840px) {
+
+    .container {
+        border-radius: 0px;
+    }
+
+    .main {
+        margin: 0vh 0% 10vh 0%;
+    }
+
+    header {
+        display: none;
+    }
+
+    .menu {
+        display:block;
+        top: 10px;
+        position: fixed;
+        max-width: 300px;
+        border-radius: 20px;
+        margin: 1rem;
+        overflow: hidden;
+        background: #00967d;
+        z-index: 100;
+    }
+
+    .btn-top {
+        padding: 5px;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 5px;
+        background: #00967d;
+    }
+
+    .btn-top img {
+        width: 40px;
+    }
+
+    .links ul  {
+        padding-left: 10px;
+    }
+
+    .links {
+        padding: 0 20px;
+        transition: height 0.4s ease-in-out;
+        transition: .5s;
+        margin-left: -150px;
+        height: 0;
+    }
+
+    .links li {
+        list-style-type: none;
+        padding: 15px 0;
+    }
+
+    .links li:last-child {
+        padding-bottom: 30px;
+    }
+
+    .links li a {
+        color: #efefef;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+
+}
+
+@media screen and (max-width: 412px) {
+    .contentBar::after {
+        left: 45%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contentBar::after {
+        left: 45%;
+    }
+}
+
+@media screen and (max-width: 367px) {
+    .contentBar::after {
+        left: 45%;
+    }
+}
+
+@media screen and (max-width: 327px) {
+    .contentBar::after {
+        left: 49%;
+    }
+}
+
+@media screen and (max-width: 307px) {
+    .contentBar::after {
+        left: 52%;
+    }
+}
+
+@media screen and (max-width: 271px) {
+    .contentBar::after {
+        left: 58%;
+    }
+}
+
+@media screen and (max-width: 249px) {
+    .contentBar::after {
+        left: 63%;
+    }
+}

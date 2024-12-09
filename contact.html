@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>formaroo-creator</title>
+  <meta name="description" content="Lovable Generated Project" />
+  <meta name="author" content="Lovable" />
+  <meta property="og:image" content="/og-image.png" />
+  <link rel="stylesheet" href="contact.css">
+  <script src="contact.js" defer ></script>
+</head>
+<title>Formulaire de Contact</title>
+</head>
+<body>
+<header>
+  <nav class="navBar">
+    <a href="index.html">Accueil<span></span></a>
+    <a href="competences.html">Competences<span></span></a>
+    <a href="veille.html">veille <span></span></a>
+    <a href="contact.html">Contact<span></span></a>
+    <a class="active" href="projets.html">Projets<span></span></a>
+  </nav>
+</header>
+<div id="root"></div>
+<script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+<script type="module" src="/src/main.tsx"></script>
+<div class="container">
+  <form id="contactForm">
+    <h2>Contactez-Moi</h2>
+
+    <div class="form-group">
+      <input type="text" id="nom" placeholder="Nom" required>
+    </div>
+
+    <div class="form-group">
+      <input type="text" id="prenom" placeholder="Prénom" required>
+    </div>
+
+    <div class="form-group">
+      <input type="email" id="email" placeholder="Email" required>
+    </div>
+
+    <div class="form-group">
+      <textarea id="message" placeholder="Message" required></textarea>
+    </div>
+    <button type="submit" id="submitBtn">Envoyer</button>
+  </form>
+  <div class ="reseaux">
+    <ul>
+      <li>
+        <a href="https://www.instagram.com/meriemmaalej/"><img src="Images/instagram-alt-logo-24.png"></a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/meriem.maalej?locale=mt_MT"><img src="Images/bxl-facebook-circle.svg"></a>
+      </li>
+      <li>
+        <a href="Resume%20-%20Meriem%20Maalej.pdf"><img src="Images/bxs-download.svg"></a>
+      </li>
+        
+    </ul>
+
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+</body>
+</html>
+</html>
